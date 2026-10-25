@@ -1,0 +1,69 @@
+.header {
+  height: 60px;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: 0 var(--spacing-6);
+  flex-shrink: 0;
+}
+
+/* ── Botón hamburguesa (móvil) ── */
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  padding: var(--spacing-2);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.menuBtn:hover {
+  background-color: var(--color-bg);
+}
+
+/* ── Título ── */
+.titleArea { flex: 1; }
+.pageTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+/* ── Indicador de estado ── */
+.statusArea {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+.demoPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fbbf24;
+  border-radius: 9999px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: default;
+}
+.demoDot {
+  width: 6px;
+  height: 6px;
+  background-color: #f59e0b;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .menuBtn { display: flex; }
+  .pageTitle { font-size: var(--font-size-base); }
+}

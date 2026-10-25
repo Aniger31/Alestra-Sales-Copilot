@@ -1,0 +1,40 @@
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+.steps ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  list-style: none;
+}
+.step a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: 0.35rem 0.8rem 0.35rem 0.4rem;
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  background: var(--color-white);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+.step a:hover { border-color: var(--color-accent); color: var(--color-primary); }
+.num {
+  display: inline-grid;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background: var(--color-bg);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+}
+.done a { color: var(--color-primary); }
+.done .num { background: #d1fae5; color: #065f46; }
+.active a { border-color: var(--color-accent); background: rgba(115, 87, 232, 0.08); color: var(--color-accent); font-weight: 600; }
+.active .num { background: var(--color-accent); color: var(--color-white); }
+.client { font-size: var(--font-size-sm); color: var(--color-text-muted); }
+.client strong { color: var(--color-primary); }

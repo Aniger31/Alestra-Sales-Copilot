@@ -1,0 +1,41 @@
+# Dependencias
+node_modules/
+.pnp
+.pnp.js
+
+# Build de Next.js
+.next/
+out/
+
+# Variables de entorno -- NUNCA subir al repositorio
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistema operativo
+.DS_Store
+*.pem
+Thumbs.db
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# Archivos del catalogo que no deben versionarse
+catalogo-simulado/*.db
+
+# Grabaciones de audio
+*.webm
+*.wav
+*.mp3
+*.ogg
+public/recordings/
+
+# Archivos temporales
+tmp/
+temp/

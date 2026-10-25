@@ -1,0 +1,73 @@
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: var(--radius-md);
+  color: #991b1b;
+  font-size: var(--font-size-sm);
+}
+.icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.msg { font-weight: 500; }
+.code {
+  font-family: monospace;
+  font-size: var(--font-size-xs);
+  opacity: 0.75;
+}
+
+/* ── Banner de modo demo ── */
+.demoBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  background-color: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: var(--radius-md);
+  color: #78350f;
+  font-size: var(--font-size-sm);
+}
+.demoIcon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.demoText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.demoText strong {
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.demoText span {
+  line-height: 1.5;
+}
+
+.dismiss {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: inherit;
+  opacity: 0.6;
+  padding: 0;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.dismiss:hover { opacity: 1; }

@@ -1,0 +1,173 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  max-width: 1100px;
+}
+
+/* ── Encabezado ── */
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+}
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+}
+.subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+/* ── Banner demo ── */
+.demoBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4) var(--spacing-5);
+  background-color: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  color: #78350f;
+  line-height: 1.5;
+}
+.demoIcon { font-size: 1.1rem; flex-shrink: 0; padding-top: 1px; }
+.demoBanner code {
+  background-color: rgba(0,0,0,0.08);
+  border-radius: 3px;
+  padding: 0.1rem 0.35rem;
+  font-size: 0.85em;
+}
+
+/* ── Estadísticas ── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--spacing-4);
+}
+
+/* ── Secciones ── */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+  flex-wrap: wrap;
+}
+.sectionTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 var(--spacing-3) 0;
+}
+.sectionHeader .sectionTitle { margin: 0; }
+.sectionNote {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-4);
+}
+
+/* ── Reunión activa ── */
+.activeMeetingWrapper {
+  max-width: 420px;
+}
+
+/* ── Accesos rápidos ── */
+.quickGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-4);
+}
+.quickCard {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  text-align: left;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.quickCard:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+}
+.quickIcon { font-size: 1.5rem; }
+.quickLabel {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+.quickDesc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* ── Casos demo ── */
+.demoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-4);
+}
+.demoCase {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+.demoCaseTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+}
+.demoCaseCompany {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  flex: 1;
+}
+.demoCaseMsg {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.demoCaseFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+}
+.demoCaseEmployees {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+.demoLoadBtn {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  white-space: nowrap;
+}
+.demoLoadBtn:hover { opacity: 0.7; }

@@ -1,0 +1,139 @@
+/* ── Variables locales del sidebar ── */
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 40;
+  transition: transform 0.25s ease;
+}
+
+/* ── Brand / logo ── */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-6) var(--spacing-5);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.brandIcon {
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.brandName {
+  color: var(--color-white);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+.brandSub {
+  color: rgba(255,255,255,0.55);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+}
+
+/* ── Navegación ── */
+.nav {
+  flex: 1;
+  padding: var(--spacing-4) var(--spacing-3);
+  overflow-y: auto;
+}
+.navList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3) var(--spacing-3);
+  border-radius: var(--radius-md);
+  color: rgba(255,255,255,0.65);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  transition: background-color 0.12s ease, color 0.12s ease;
+  position: relative;
+  text-decoration: none;
+}
+.navLink:hover {
+  background-color: rgba(255,255,255,0.07);
+  color: var(--color-white);
+}
+.navIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navLabel { flex: 1; }
+
+/* Estado activo */
+.active {
+  background-color: rgba(115, 87, 232, 0.25);
+  color: var(--color-white);
+}
+.active .navIcon { color: var(--color-accent); }
+.activeIndicator {
+  width: 3px;
+  height: 18px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+  position: absolute;
+  right: 0;
+}
+
+/* ── Footer ── */
+.sidebarFooter {
+  padding: var(--spacing-4) var(--spacing-5);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.footerText {
+  font-size: var(--font-size-xs);
+  color: rgba(255,255,255,0.35);
+}
+
+/* ── Responsive: overlay y drawer en móvil ── */
+.overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+    box-shadow: var(--shadow-lg);
+  }
+  .overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.45);
+    z-index: 39;
+  }
+}
