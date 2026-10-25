@@ -5,7 +5,6 @@ Desarrollado para el Hackathon Alestra.
 
 > **Aviso:** Este es un prototipo académico desarrollado para demostración.
 > No representa productos, precios ni condiciones oficiales de Alestra.
-
 ---
 
 ## Equipo
